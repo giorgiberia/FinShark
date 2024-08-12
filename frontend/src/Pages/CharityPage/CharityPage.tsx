@@ -4,24 +4,24 @@ import Table from "../../Components/Table/Table";
 type Props = {};
 
 const data = [
-    { id: 1, destination: "Operations", amount: "$5,000", date: "2024-01-10" },
-    { id: 2, destination: "Batumi Kids Place", amount: "$3,500", date: "2024-02-14" },
-    { id: 3, destination: "Kobuleti wheelchair enterprise", amount: "$7,200", date: "2024-03-22" },
-    { id: 4, destination: "Kutaisi rehabilitation center", amount: "$2,800", date: "2024-04-18" },
-    { id: 5, destination: "Help some families with Housing", amount: "$40,000", date: "2024-05-30" },
+    { id: 1, destination: "ოპერაციები", amount: "$5,000", date: "2024-01-10" },
+    { id: 2, destination: "ბათუმის ბავშვთა თავშესაფარი", amount: "$3,500", date: "2024-02-14" },
+    { id: 3, destination: "ქობულეთის ეტლების საწარმო", amount: "$7,200", date: "2024-03-22" },
+    { id: 4, destination: "ქუთაისის რეაბილიტაციის ცენტრი", amount: "$2,800", date: "2024-04-18" },
+    { id: 5, destination: "დახმარება ოჯახებისთვის საცხოვრებელით", amount: "$40,000", date: "2024-05-30" },
 ];
 
 const tableConfig = [
     {
-        label: "Destination",
+        label: "დანიშნულება",
         render: (item: any) => item.destination,
     },
     {
-        label: "Amount Spent",
+        label: "გადახდილი თანხა",
         render: (item: any) => item.amount,
     },
     {
-        label: "Date",
+        label: "თარიღი",
         render: (item: any) => item.date,
     },
 ];
@@ -31,9 +31,9 @@ const CharityPage = (props: Props) => {
         <div className="bg-gray-50 min-h-screen p-3">
             <div className="max-w-7xl mx-auto">
                 <header className="mb-6">
-                    <h1 className="text-2xl font-bold text-gray-800 mb-1">Charity Fund Distribution</h1>
+                    <h1 className="text-2xl font-bold text-gray-800 mb-1">ქველმოქმედების ფონდის განაწილება</h1>
                     <p className="text-base text-gray-600">
-                        Detailed report on how charity funds have been distributed across various sectors.
+                        დეტალური ანგარიში, თუ როგორ იქნა განაწილებული ქველმოქმედების ფონდი სხვადასხვა სექტორებში.
                     </p>
                 </header>
 
@@ -49,7 +49,7 @@ const CharityPage = (props: Props) => {
                 </div>
 
                 <footer className="mt-6 text-center text-gray-500">
-                    <p>Thank you for your contributions!</p>
+                    <p>გმადლობთ თქვენი წვლილისთვის!</p>
                 </footer>
             </div>
         </div>
