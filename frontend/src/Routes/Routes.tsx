@@ -12,6 +12,10 @@ import CashflowStatement from "../Components/CashflowStatement/CashflowStatement
 import LoginPage from "../Pages/LoginPage/LoginPage";
 import RegisterPage from "../Pages/RegisterPage/RegisterPage";
 import ProtectedRoute from "./ProtectedRoute";
+import AdminLoginPage from "../Pages/AdminLoginPage/AdminLoginPage";
+import CharityPage from "../Pages/CharityPage/CharityPage";
+import AboutPage from "../Pages/AboutPage/AboutPage";
+import MotivationPage from "../Pages/MotivationPage/MotivationPage";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +25,13 @@ export const router = createBrowserRouter([
       { path: "", element: <HomePage /> },
       { path: "login", element: <LoginPage /> },
       { path: "register", element: <RegisterPage /> },
+      { path: "charity", element: <CharityPage /> },
+      { path: "about", element: <AboutPage /> },
+      { path: "motivation", element: <MotivationPage /> },
+      {
+        path: "admin",
+        element: <AdminLoginPage />
+      },
       {
         path: "search",
         element: (
@@ -47,8 +58,5 @@ export const router = createBrowserRouter([
       },
     ],
   },
-  {
-    path: "admin",
-    element: <LoginPage />
-  },
+
 ]);
