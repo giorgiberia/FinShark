@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useAuth } from "../../Context/useAuth";
 import { useForm } from "react-hook-form";
+import {toast} from "react-toastify";
 
 type Props = {};
 
@@ -17,7 +18,7 @@ const validation = Yup.object().shape({
 });
 
 const AdminLoginPage = (props: Props) => {
-  const { loginUser } = useAuth();
+  const { loginUser,user } = useAuth();
   const {
     register,
     handleSubmit,
@@ -26,6 +27,12 @@ const AdminLoginPage = (props: Props) => {
 
   const handleLogin = (form: LoginFormsInputs) => {
     loginUser(form.userName, form.password);
+    if (user?.userRole === "admin"){
+        toast.success("Admin Login Success!");
+    }
+    else {
+        toast.error("You are not an Admin!");
+    }
   };
   return (
     <section className="bg-gray-50 dark:bg-gray-900">
